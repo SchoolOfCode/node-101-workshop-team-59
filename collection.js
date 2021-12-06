@@ -20,4 +20,6 @@ let myCollection = [
         whatILike: "Warms me up"
     }
   ];
+
+  //export the file so can be used in other pages
   export default myCollection;
