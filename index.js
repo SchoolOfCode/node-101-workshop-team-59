@@ -1,4 +1,5 @@
 import collection from "./collection.js";
+import chalk from "chalk";
 
 
   function describeItem(itemIndex) {
@@ -9,7 +10,22 @@ import collection from "./collection.js";
 
 
   function describeCollection(array) {
-    array.forEach(describeItem)
+    array.forEach(colorCyan)
   }
 
-  describeCollection(collection);
+  function colorCyan(object){
+    console.log(chalk.cyan(object.name))
+}
+
+function countYellow(object){
+  console.log(chalk.yellow(object.count))
+}
+
+  function collectionGreen(object){
+    console.log(chalk.green(object.whatILike))
+  }
+
+describeCollection(collection);
+
+  collection.forEach(countYellow);
+  collection.forEach(collectionGreen);
